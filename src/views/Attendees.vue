@@ -106,7 +106,6 @@ export default {
       return this.displayAttendees.filter(dataFilter);
     }
   },
-
   methods: {
     chooseRandom: function() {
       const randomAttendee = Math.floor(Math.random() * this.attendees.length);
@@ -150,7 +149,7 @@ export default {
           .collection("meetings")
           .doc(this.meetingID)
           .collection("attendees")
-          .doc("attendeeID")
+          .doc(attendeeID)
           .delete();
       }
     }
